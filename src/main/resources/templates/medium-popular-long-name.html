@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Movies - MPLN</title>
+</head>
+<body>
+<h1>Now Playing Movies with Pop: 30-80 and Long Titles</h1>
+<a href="/">Back to Home</a>
+<div th:each="movie : ${movies}">
+    <hr/>
+    <img width="150px" th:src="@{'http://image.tmdb.org/t/p/original' + ${movie.posterPath}}"/>
+    <br/>
+    <span th:text="${movie.title}"></span>
+</div>
+</body>
+</html>
